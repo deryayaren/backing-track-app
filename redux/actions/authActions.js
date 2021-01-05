@@ -3,6 +3,7 @@ import * as actionTypes from "./actionTypes";
 
 import firebase from "firebase";
 import "firebase/auth";
+import { CommonActions } from "@react-navigation/native";
 
 export const userLoginRequest = createAction(actionTypes.USER_LOGIN_REQUEST);
 export const userLoginSuccess = createAction(actionTypes.USER_LOGIN_SUCCESS);
@@ -23,7 +24,12 @@ export const loginRequest = (credentials) => {
     .then((user) => {
       const response = user;
       userLoginSuccess(response);
-      navigation.push("Dashboard");
+      navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{ name: "Home" }],
+        })
+      );
     })
     .catch((error) => {
       const err = error;

@@ -1,13 +1,12 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet } from "react-native";
 import { createStackNavigator } from "@react-navigation/stack";
 import { NavigationContainer } from "@react-navigation/native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
-import { Login } from "./Screens/Auth/Login/Login";
-import Dashboard from "./Screens/Dashboard/Dashboard";
 import firebase from "firebase";
-import { Signup } from "./Screens/Auth/Signup/Signup";
+import AuthStackNavigator from "./Screens/Auth";
+import HomeNavigator from "./Screens/Dashboard";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDLeQe_lBSMZL0JcyYvoQJTYFAlqVV4wo",
@@ -26,13 +25,14 @@ const Stack = createStackNavigator();
 
 const Root = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator headerMode="none">
-        <Stack.Screen name="Login" component={Login} />
-        <Stack.Screen name="Signup" component={Signup} />
-        <Stack.Screen name="Dashboard" component={Dashboard} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <SafeAreaProvider>
+      <NavigationContainer>
+        <Stack.Navigator headerMode="none">
+          <Stack.Screen name="Auth" component={AuthStackNavigator} />
+          <Stack.Screen name="Home" component={HomeNavigator} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    </SafeAreaProvider>
   );
 };
 

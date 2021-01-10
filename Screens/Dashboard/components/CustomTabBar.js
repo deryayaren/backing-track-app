@@ -28,9 +28,8 @@ const CustomTabBar = () => {
             <MaterialIcons
               name="dashboard"
               size={20}
-              color={selected === "Dashboard" ? "tomato" : "black"}
+              color={selected === "Dashboard" ? "#F78710" : "white"}
             />
-            <Text style={{ marginTop: 5 }}>Dashboard</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -43,9 +42,8 @@ const CustomTabBar = () => {
             <MaterialCommunityIcons
               name="playlist-music"
               size={24}
-              color={selected === "Playlist" ? "tomato" : "black"}
+              color={selected === "Playlist" ? "#F78710" : "white"}
             />
-            <Text style={{ marginTop: 0 }}>My Playlists</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -58,9 +56,8 @@ const CustomTabBar = () => {
             <FontAwesome5
               name="store-alt"
               size={20}
-              color={selected === "Store" ? "tomato" : "black"}
+              color={selected === "Store" ? "#F78710" : "white"}
             />
-            <Text style={{ marginTop: 5 }}>Store</Text>
           </View>
         </TouchableOpacity>
         <TouchableOpacity
@@ -73,9 +70,8 @@ const CustomTabBar = () => {
             <FontAwesome
               name="user"
               size={20}
-              color={selected === "MyProfile" ? "tomato" : "black"}
+              color={selected === "MyProfile" ? "#F78710" : "white"}
             />
-            <Text style={{ marginTop: 5 }}>My Profile</Text>
           </View>
         </TouchableOpacity>
       </View>
@@ -87,7 +83,7 @@ export default CustomTabBar;
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "white",
+    backgroundColor: "#16161A",
     width,
     height: height / 13,
     justifyContent: "center",

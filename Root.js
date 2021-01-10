@@ -9,12 +9,12 @@ import AuthStackNavigator from "./Screens/Auth";
 import HomeNavigator from "./Screens/Dashboard";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBDLeQe_lBSMZL0JcyYvoQJTYFAlqVV4wo",
-  authDomain: "backing-track-app-e9292.firebaseapp.com",
-  projectId: "backing-track-app-e9292",
-  storageBucket: "backing-track-app-e9292.appspot.com",
-  messagingSenderId: "22595607275",
-  appId: "1:22595607275:web:10b228ed2b5014db55fcae",
+  apiKey: "AIzaSyDhRk3jGPVzcv90d4qnymCVwtDWD0MTdUA",
+  authDomain: "backing-track-app-b56c2.firebaseapp.com",
+  projectId: "backing-track-app-b56c2",
+  storageBucket: "backing-track-app-b56c2.appspot.com",
+  messagingSenderId: "1096771674617",
+  appId: "1:1096771674617:web:e997dbb5cf6de887cedd28",
 };
 
 if (firebase.apps.length === 0) {
